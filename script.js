@@ -16,14 +16,11 @@ function createGrid(size) {
         content.removeChild(content.firstChild);
     }
 
-const squareSize = 100 / size;
+    const totalDivs = size * size;
 
-for (let i = 0; i < size * size; i++) {
+for (let i = 0; i < totalDivs; i++) {
     const square = document.createElement('div');
     square.classList.add('square');
-    square.style.width = squareSize + '%';
-    square.style.height = squareSize + '%';
-    content.appendChild(square); 
 
     square.addEventListener('mouseover', function () {
         if (isFilling) {
@@ -40,7 +37,18 @@ for (let i = 0; i < size * size; i++) {
             this.style.backgroundColor = '';
         }
     });
+
+    content.appendChild(square);
     }
+
+    const squareSize = content.clientWidth / size;
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(square => {
+        square.style.width = squareSize + 'px';
+        square.style.height = squareSize + 'px';
+    });
+
+    
 }
 
 eraseButton.addEventListener('click', function () {

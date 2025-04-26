@@ -1,6 +1,8 @@
 const content = document.querySelector('.content');
 const slider = document.querySelector('.slider');
 
+let isFilling = false;
+
 function createGrid(size) {
     while (content.firstChild) {
         content.removeChild(content.firstChild);
@@ -15,6 +17,17 @@ for (let i = 0; i < size * size; i++) {
     square.style.height = squareSize + '%';
     content.appendChild(square);
 
+    square.addEventListener('mouseover', function () {
+        if (isFilling) {
+            this.classList.add('filled');
+        }
+    });
+    square.addEventListener('mousedown', function() {
+        isFilling = !isFilling;
+        if (isFilling) {
+            this.classList.add('filled');
+        }
+    });
     }
 }
 

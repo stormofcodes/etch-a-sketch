@@ -81,7 +81,7 @@ input[type=range] {
 }
 
 /* Slider thumb styling */
-input[type=range]::-webkit-slider-thumb {
+ input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 60px;
@@ -92,7 +92,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* Firefox slider thumb */
-input[type=range]::-moz-range-thumb {
+ input[type=range]::-moz-range-thumb {
     width: 60px;
     height: 60px;
     background: url('img/flower.svg') no-repeat center center;
@@ -101,12 +101,40 @@ input[type=range]::-moz-range-thumb {
 }
 
 /* IE/Edge slider thumb */
-input[type=range]::-ms-thumb {
+ input[type=range]::-ms-thumb {
     width: 60px;
     height: 60px;
     background: url('img/flower.svg') no-repeat center center;
     background-size: contain;
     cursor: pointer;
 }
-.footer {
+
+.colorContainer {
+    position: relative;
+  }
+  
+  .colorIcon {
+    width: 50px;
+    height: 50px;
+}
+  
+  .colorInput {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.eraseButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+  
+  .eraseIcon {
+    width: 45px;
 }

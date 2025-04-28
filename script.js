@@ -1,6 +1,7 @@
 const content = document.querySelector('.content');
 const slider = document.querySelector('.slider');
 const colorInput = document.querySelector('.colorInput');
+const colorIcon = document.querySelector('.colorIcon');
 const eraseButton = document.querySelector('.eraseButton');
 const eraseIcon = eraseButton.querySelector('.eraseIcon');
 
@@ -64,16 +65,38 @@ eraseButton.addEventListener('click', function () {
 
     if (isErasing) {
         eraseIcon.src = 'img/pen.svg';
-        eraseButton.style.backgroundColor = '';
+        eraseButton.classList.add('erase-active');
+            setTimeout(function () {
+            eraseButton.classList.remove('erase-active');
+            }, 200);
     } else {
         eraseIcon.src = 'img/eraser.svg';
-        eraseButton.style.backgroundColor = '';
+        eraseButton.classList.add('erase-active');
+        setTimeout(function () {
+            eraseButton.classList.remove('erase-active');
+            }, 200);
     }
+});
+
+colorInput.addEventListener('click', function () {
+    colorIcon.classList.add('color-active');
+
+    setTimeout(function () {
+        colorIcon.classList.remove('color-active');
+    }, 200);
 });
 
 slider.addEventListener('input', function() {
     const size = slider.value;
     createGrid(size);
 });
+
+slider.addEventListener('mousedown', function() {
+    slider.classList.add('slider-active');
+  });
+  
+  slider.addEventListener('mouseup', function() {
+    slider.classList.remove('slider-active');
+  });
 
 createGrid(slider.value);

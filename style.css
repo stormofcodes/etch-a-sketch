@@ -82,7 +82,7 @@ input[type=range] {
     outline: none;
 }
 
-/* Slider thumb styling */
+/* Slider thumb styling chrome/firefox */
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -98,18 +98,7 @@ input[type=range]::-webkit-slider-thumb {
     inset -3px -3px 3px 0px rgba(65, 82, 20, 0.637);
 }
 
-input[type=range].slider-active::-webkit-slider-thumb {
-    transform: scale(1.07);
-    filter: brightness(1.1);
-    box-shadow:
-      3px 3px 6px rgba(63, 12, 12, 0.6),
-      inset 2px 2px 2px rgba(255, 230, 180, 0.7),
-      inset -2px -2px 2px rgba(65, 82, 20, 0.5);
-    transition: all 0.2s ease;
-}
-
-/* Firefox slider thumb */
- input[type=range]::-moz-range-thumb {
+input[type=range]::-moz-range-thumb {
     width: 60px;
     height: 60px;
     background: url('img/flower.svg') no-repeat center center;
@@ -120,6 +109,17 @@ input[type=range].slider-active::-webkit-slider-thumb {
     5px 5px 4px 0px rgba(63, 12, 12, 0.685),
     inset 3px 3px 3px 0px rgb(235, 255, 185),
     inset -3px -3px 3px 0px rgba(65, 82, 20, 0.637);
+}
+
+/* Active slider thumb chrome/firefox */
+input[type=range].slider-active::-webkit-slider-thumb {
+    transform: scale(1.07);
+    filter: brightness(1.1);
+    box-shadow:
+      3px 3px 6px rgba(63, 12, 12, 0.6),
+      inset 2px 2px 2px rgba(255, 230, 180, 0.7),
+      inset -2px -2px 2px rgba(65, 82, 20, 0.5);
+    transition: all 0.2s ease;
 }
 
 input[type=range].slider-active::-moz-range-thumb {
@@ -131,36 +131,12 @@ input[type=range].slider-active::-moz-range-thumb {
       inset -2px -2px 2px rgba(65, 82, 20, 0.5);
     transition: all 0.2s ease;
 }
-
-/* IE/Edge slider thumb */
- input[type=range]::-ms-thumb {
-    width: 60px;
-    height: 60px;
-    background: url('img/flower.svg') no-repeat center center;
-    background-size: contain;
-    cursor: pointer;
-    border-radius: 50%;
-    box-shadow:
-    5px 5px 4px 0px rgba(63, 12, 12, 0.685),
-    inset 3px 3px 3px 0px rgb(235, 255, 185),
-    inset -3px -3px 3px 0px rgba(65, 82, 20, 0.637);
-}
-
-input[type=range].slider-active::-ms-thumb {
-    transform: scale(1.07);
-    filter: brightness(1.1);
-    box-shadow:
-      3px 3px 6px rgba(63, 12, 12, 0.6),
-      inset 2px 2px 2px rgba(255, 230, 180, 0.7),
-      inset -2px -2px 2px rgba(65, 82, 20, 0.5);
-    transition: all 0.2s ease;
-}
-
+  
 .colorContainer {
     position: relative;
   }
   
-  .colorIcon {
+.colorIcon {
     width: 50px;
     height: 50px;
     padding: 6px 15px;
@@ -171,7 +147,7 @@ input[type=range].slider-active::-ms-thumb {
     inset 3px 3px 3px 0px rgb(255 164 164 / 25%);
 }
 
-  .colorInput {
+.colorInput {
     opacity: 0;
     position: absolute;
     top: 0;

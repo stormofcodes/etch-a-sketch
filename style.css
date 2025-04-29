@@ -58,7 +58,7 @@ body {
 .square {
     box-sizing: border-box;
     background:  #ddd;
-    border: 1px solid #e7e7e7;
+    border: 1px solid #e7e7e769;
     user-select: none;
 }
 

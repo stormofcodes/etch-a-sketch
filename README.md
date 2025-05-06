@@ -1,6 +1,8 @@
-# 🌸 Etch-a-Sketch
+# Etch-a-Sketch
 
-A creative drawing tool inspired by the classic Etch-a-Sketch toy, built with HTML, CSS, and JavaScript. You can draw, change colors, erase, or reset — all in a clean and playful design.
+Unleash your inner toddler with a futuristic twist. Draw, erase, and color-swap your way to pseudo-artistic enlightenment. Mistakes encouraged. Sanity optional.
+
+👉 [Click here to use the Etch-a-Sketch live](https://stormofcodes.github.io/etch-a-sketch/)
 
 ![Etch-a-Sketch screenshot](img/Screenshot.png)
 
@@ -16,3 +18,7 @@ A creative drawing tool inspired by the classic Etch-a-Sketch toy, built with HT
 - **Color Selection:** Choose the current color to draw with.
 - **Erase:** Switches to an eraser – click again to go back to drawing.
 - **Grid:** The slider changes the grid size (from 16 to 100 squares).
+
+## 🦋 Made by
+
+**Stormofcodes** via [The Odin Project](https://www.theodinproject.com/)
